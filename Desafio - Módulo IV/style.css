@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,200;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
 
 *{
     padding: 0;
@@ -11,6 +12,7 @@ html{
     font-family: 'Poppins', 'Times New Roman', Times, serif ;
     scroll-behavior: smooth;
 }
+
 /* Inicio do header nav */
 header {
     position: absolute;
@@ -30,6 +32,12 @@ header .logo {
     font-size: 2em;
     text-transform: uppercase;
     letter-spacing: 2px;
+}
+
+@media only screen and (max-width: 680px) {
+    header .logo {
+        display: none;
+    }
 }
 
 header ul {
@@ -58,6 +66,22 @@ header ul li a:hover, header ul li a.active {
 
 /* Final do header nav */
 
+.data {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.data p {
+    font-size: 18px;
+    margin-top: 35px;
+}
+
+.teste {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
 a{
     text-decoration: none;
 }
@@ -83,13 +107,14 @@ p {
 }
 .section-title {
     font-size: 4rem;
-    font-weight: 500;
+    font-weight: 700;
     color: black;
     margin-bottom: 10px;
     margin-top: 5px;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
     text-align: center;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 
@@ -98,16 +123,21 @@ p {
 
 
 #presentation{
-    background-image: url(./fundo.jpg);
+    background-image: url(testebg.jpg);
     background-size: cover;
     background-position: top center;
     z-index: 1;
 }
 
-.main-img {
-    width: 400px;
-    margin-left: 200px;
-    position: relative;
+.div-ajuste {
+    margin-left: 400px;
+    visibility: hidden;
+}
+
+@media only screen and (max-width: 800px) {
+    .div-ajuste {
+        display: none;
+    }
 }
 
 #presentation h1{
@@ -132,9 +162,10 @@ p {
 #presentation .cta{
     display: inline-block;
     padding: 10px 30px;
-    color: #FF1700;
+    color: #42C920;
     background-color: transparent;
-    border: 2px solid #FF1700;
+    border: 1.5px solid #42C920;
+    border-radius: 30px;
     font-size: 2rem;
     text-transform: uppercase;
     letter-spacing: .1rem;
@@ -146,7 +177,7 @@ p {
 #presentation .cta:hover{
     color: white;
     font-weight: 500;
-    background-color: #FF1700;
+    background-color: #42C920;
 }
 #presentation h1 span{
     position: absolute;
@@ -156,7 +187,7 @@ p {
     width: 0%;
     animation: text_reveal_box 1s ease;
     animation-delay: .5s;
-    background-color: #FF1700;
+    background-color: #42C920;
 }
 #presentation h1:nth-child(1) span{
     animation-delay: .5s;
@@ -178,6 +209,81 @@ p {
     opacity: 0.5;
     z-index: -1;
 }
+
+/* Seção de Footer */
+
+footer {
+    background-image: url(img-footer.png);
+    background-size: cover;
+    background-position: top center;
+    z-index: 1;
+    color: white;
+}
+
+.footer-notas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .footer-notas {
+        flex-direction: column;
+    }
+}
+
+.notas {
+    margin-top: 50px;
+    width: 800px;
+}
+
+.footer-notas a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    margin-top: 50px;
+    border: solid 1px;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.footer-notas a:hover {
+    color: #42C920;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+@media only screen and (max-width: 768px) {
+    .footer-links {
+        flex-direction: column;
+    }
+}
+
+.redes-sociais {
+    margin-left: 410px;
+    display: flex;
+    justify-content: space-between;
+}
+@media only screen and (max-width: 768px) {
+    .redes-sociais {
+        flex-direction: column;
+    }
+}
+
+.footer-logo {
+    width: 200px;
+}
+
+.footer-img-links {
+    height: 35px;
+}
+/* Fim da Seção de Footer */
 
 /* Seção de Portifólio */
 
@@ -215,7 +321,7 @@ p {
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-    background-image: linear-gradient(60deg, #5a10b5 0%, #002349 100%);
+    background-image: linear-gradient(to left bottom, #000000, #0e0c0d, #151518, #191c20, #1c2427);
     color: white;
 }
 
@@ -244,7 +350,7 @@ p {
     top:0;
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    /*background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);*/
     opacity: 0.7;
 }
 #portfolio .project-img img{
@@ -252,7 +358,7 @@ p {
 }
 #portfolio .project-item:hover .project-img img{
     transform: scale(1.1);
-}
+} 
 
 
 /* Keyframes */
@@ -264,7 +370,7 @@ p {
 }
 @keyframes text_reveal_name{
     100%{
-        color: #FF1700;
+        color: #42C920;
         font-weight: 500px;
     }
 }
