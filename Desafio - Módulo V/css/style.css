@@ -12,6 +12,7 @@ body {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 } 
 
 /* HEADER */
@@ -68,7 +69,8 @@ main .container-main{
     align-items: center;
     justify-content: space-between;
     max-width: 980px;
-    margin: 100px auto 0px auto;
+    margin: 0px auto 0px auto;
+    padding-top: 100px;
 }
 
 h2{
@@ -249,7 +251,6 @@ footer {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: -200px;
     background-color: #000000;
     padding-top: 40px;
 }
