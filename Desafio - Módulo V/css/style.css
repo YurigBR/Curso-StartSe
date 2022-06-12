@@ -317,3 +317,28 @@ footer a:hover {
 .botao-footer:hover {
     border-color: #0080ed;
 }
+
+/*Final do footer hover*/
+
+/*Scrollbar personalizada - Vi em um post no instagram como fazer isso e achei muito legal*/
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0080ed;
+    border-radius: 30px;
+}
+
+::-webkit-scrollbar-track:hover {
+    background: #94c6f1;
+}
+
+::-webkit-scrollbar-corner {
+    color: #000000;
+}
