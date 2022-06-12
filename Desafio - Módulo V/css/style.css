@@ -11,6 +11,7 @@ body {
     font-family: "Source Sans Pro", 'Times New Roman';
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
 } 
 
 /* HEADER */
@@ -59,7 +60,7 @@ header .container img{
 
 /* MAIN */
 main {
-    margin-bottom: 100px;
+    margin-bottom: 0px;
 }
 
 main .container-main{
@@ -86,6 +87,7 @@ h3{
 
 form {
     margin-top: 20px;
+    background-color: #fff;
 }
 
 form input {
@@ -113,6 +115,12 @@ form [type="submit"]:hover {
 
 main .container-main img{
     width: 600px;
+}
+
+.cont-principal {
+    background-color: #fff;
+    margin-bottom: 500px;
+    padding-top: 100px;
 }
 
 /* CARDS */
@@ -177,6 +185,7 @@ a {
 }
 
 /*Formulario de contato*/
+
 fieldset {
     max-width: 980px;
     margin: 100px auto 0px auto; 
@@ -232,12 +241,17 @@ fieldset {
 /*Footer*/
 
 footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    z-index: -5;
+
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 75px;
+    margin-top: -200px;
     background-color: #000000;
-    padding: 50px;
+    padding-top: 40px;
 }
 
 footer a {
